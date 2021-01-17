@@ -1,14 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './sass/app.scss';
-import App from './App';
-
+import "./sass/app.scss";
+import Home from "./Pages/Home";
+import { BooksProvider } from "./Stores/BooksStore";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BooksProvider>
+    <Home />
+  </BooksProvider>,
+  document.getElementById("root")
 );
-
