@@ -24,7 +24,7 @@ const BooksList = () => {
             <article key={el.id} className="article">
               <img src={el.poster} alt="poster" className="article__poster" />
               <h2>{el.title}</h2>
-              {getAuthor(el.author)}
+              {getAuthorsName(el.author)}
               <p>{el.price}</p>
             </article>
           )
