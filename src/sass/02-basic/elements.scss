@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  label {
+    margin-top: 20px;
+  }
+
+  select {
+    margin-top: 20px;
+  }
+}
