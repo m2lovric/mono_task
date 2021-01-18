@@ -5,10 +5,10 @@ import AuthorsList from '../Components/AuthorsList'
 const Home = () => {
 
   return (
-    <main>
+    <>
       <AuthorsList />
       <BooksList />
-    </main>
+    </>
   )
 }
 
