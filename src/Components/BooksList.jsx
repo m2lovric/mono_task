@@ -6,7 +6,7 @@ const BooksList = () => {
   const store = useBooksContext();
   const storeAuthor = useAuthorsContext();
 
-  const getAuthor = (id) => {
+  const getAuthorsName = (id) => {
     const found = storeAuthor.authors.find(el => el.id == id);
     return (
       <h3>
