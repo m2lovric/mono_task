@@ -1,12 +1,12 @@
 import React from 'react';
 import BooksList from '../Components/BooksList';
-import AuthorsList from '../Components/AuthorsList'
+import Filters from '../Components/Filters';
 
 const Home = () => {
 
   return (
     <>
-      <AuthorsList />
+      <Filters />
       <BooksList />
     </>
   )
