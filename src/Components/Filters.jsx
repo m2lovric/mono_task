@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import { useAuthorsContext } from '../Stores/AuthorsStore';
+import { useState, createContext, useContext } from 'react';
+import { useLocalStore, useObserver } from "mobx-react-lite";
+import { useAuthorsContext } from '../Common/AuthorsStore';
+import { useSearchContext } from '../Stores/FiltersStore';
 
 const Filters = () => {
-  const storeAuthors = useAuthorsContext();
   const [author, setAuthor] = useState('');
 
-  return (
+  const storeAuthors = useAuthorsContext();
+  const storeSearch = useSearchContext();
+
+  return useObserver(() => (
     <section>
-      <label htmlFor="search">Search: </label>
-      <input name="search" type="text" />
+      <label htmlFor="search">Title Search: </label>
+      <input name="search" type="text" onChange={(e) => storeSearch.addSearchText(e.target.value)} />
 
       <select name="price" id="">
         <option value="high">Price High to Low</option>
@@ -31,7 +35,7 @@ const Filters = () => {
         }
       </select>
     </section>
-  )
+  ));
 }
 
 export default Filters;
