@@ -4,8 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import Layout from './Layout/Layout';
 
 import "./sass/app.scss";
-import { BooksProvider } from "./Stores/BooksStore";
-import { AuthorsProvider } from "./Stores/AuthorsStore";
+import { BooksProvider } from "./Common/BooksStore";
+import { AuthorsProvider } from "./Common/AuthorsStore";
 
 ReactDOM.render(
   <BrowserRouter>
