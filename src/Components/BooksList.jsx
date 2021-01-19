@@ -2,6 +2,7 @@ import { useObserver } from 'mobx-react-lite';
 import { useBooksContext } from '../Common/BooksStore';
 import { useAuthorsContext } from '../Common/AuthorsStore';
 import { useSearchContext } from '../Stores/FiltersStore';
+import BookArticle from './BookArticle';
 
 const BooksList = () => {
   const store = useBooksContext();
@@ -20,27 +21,12 @@ const BooksList = () => {
   return useObserver(() => (
     <section className="full books_grid">
       {
-
         storeSearch.search ?
           store.books.filter(el => el.title.toLowerCase().includes(storeSearch.search)).map(el => {
-            return (
-              <article key={el.id} className="article">
-                <img src={el.poster} alt="poster" className="article__poster" />
-                <h2>{el.title}</h2>
-                {getAuthorsName(el.author)}
-                <p>{el.price}</p>
-              </article>
-            )
+            return <BookArticle id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
           })
           : store.books.map(el => {
-            return (
-              <article key={el.id} className="article">
-                <img src={el.poster} alt="poster" className="article__poster" />
-                <h2>{el.title}</h2>
-                {getAuthorsName(el.author)}
-                <p>{el.price}</p>
-              </article>
-            )
+            return <BookArticle id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
           })
       }
     </section>
