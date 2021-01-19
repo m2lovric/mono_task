@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuthorsContext } from '../Stores/AuthorsStore';
+import { useAuthorsContext } from '../Common/AuthorsStore';
 
 const AddAuthor = () => {
   const storeAuthors = useAuthorsContext();

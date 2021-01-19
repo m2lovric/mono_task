@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useObserver } from 'mobx-react-lite';
-import { useAuthorsContext } from '../Stores/AuthorsStore'
-import { useBooksContext } from '../Stores/BooksStore';
+import { useAuthorsContext } from '../Common/AuthorsStore'
+import { useBooksContext } from '../Common/BooksStore';
 
 const AddBook = () => {
   const storeBooks = useBooksContext();
