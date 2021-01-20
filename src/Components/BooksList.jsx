@@ -23,10 +23,10 @@ const BooksList = () => {
       {
         storeSearch.search ?
           store.books.filter(el => el.title.toLowerCase().includes(storeSearch.search)).map(el => {
-            return <BookArticle id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
+            return <BookArticle key={el.id} id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
           })
           : store.books.map(el => {
-            return <BookArticle id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
+            return <BookArticle key={el.id} id={el.id} poster={el.poster} title={el.title} getAuthorsName={getAuthorsName} author={el.author} price={el.price} />
           })
       }
     </section>
