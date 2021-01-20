@@ -4,6 +4,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import AddBook from '../Pages/AddBook';
 import AddAuthor from '../Pages/AddAuthor';
 import Home from '../Pages/Home';
+import Edit from '../Pages/Edit';
 
 const Header = () => {
   return (
@@ -22,9 +23,10 @@ const Header = () => {
         <Route path="/addbook">
           <AddBook />
         </Route>
-        <Route exact path="/addauthor">
+        <Route path="/addauthor">
           <AddAuthor />
         </Route>
+        <Route path="/edit/:id" render={(props) => <Edit {...props} />} />
       </Switch>
     </header>
   )
