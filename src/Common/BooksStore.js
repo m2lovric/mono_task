@@ -10,7 +10,7 @@ export const BooksProvider = ({ children }) => {
   const store = useLocalStore(() => ({
     books: [
       {
-        id: uuidv4(),
+        id: "authoridjameslev",
         title: "Leviathan Wakes",
         author: "authoridjames",
         price: 19.0,
@@ -18,7 +18,7 @@ export const BooksProvider = ({ children }) => {
           "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/8414/9781841499888.jpg",
       },
       {
-        id: uuidv4(),
+        id: "authoridjamescal",
         title: "Caliban's War",
         author: "authoridjames",
         price: 24.5,
