@@ -28,7 +28,7 @@ const AddBook = () => {
       <label htmlFor="title">Title: </label>
       <input name="title" type="text" onChange={(e) => setTitle(e.target.value)} value={title} />
       <label htmlFor="price">Price</label>
-      <input type="number" name="price" onChange={(e) => setPrice(e.target.value)} value={price} />
+      <input type="number" step="0.01" name="price" onChange={(e) => setPrice(e.target.value)} value={price} />
       <select name="author" value={author} onChange={(e) => setAuthor(e.target.value)}>
         <option value="">Author</option>
         {
